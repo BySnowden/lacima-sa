@@ -1,10 +1,5 @@
-/* 1. The Reset (Crucial for consistent spacing) */
 html {
-  /* 1. Move smooth scrolling here (Best Practice) */
   scroll-behavior: smooth;
-
-  /* 2. THE FIX: This creates a "buffer zone" at the top */
-  /* This value should match the height of your header approx */
   scroll-padding-top: 100px;
 }
 
@@ -14,7 +9,6 @@ html {
   box-sizing: border-box;
 }
 
-/* 2. Global Styles */
 body {
   font-family: sans-serif;
   line-height: 1.6;
@@ -34,7 +28,6 @@ main section:first-of-type {
   border-top: none;
 }
 
-/* Centers the whole page content */
 header {
   position: sticky;
   top: 0;
@@ -42,19 +35,17 @@ header {
   background-color: #fdfdfd;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-  /* --- NEW FLEXBOX MAGIC STARTS HERE --- */
-  display: flex; /* Activates Flexbox */
-  justify-content: space-between; /* Pushes H1 to left, Nav to right */
-  align-items: center; /* Vertically aligns them in the middle */
-  flex-wrap: wrap; /* Allows wrapping on tiny phones if needed */
-  /* ----------------------------------- */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
   max-width: 960px;
   margin: 0 auto;
   padding: 10px 20px;
 }
 header h1 {
-  font-size: 1.5rem; /* Slightly smaller than default to fit nicely */
+  font-size: 1.5rem;
 }
 main,
 footer {
@@ -63,12 +54,11 @@ footer {
   padding: 20px;
 }
 
-/* 3. Navigation Bar */
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  margin-top: 0; /* CHANGED: Remove this so it aligns perfectly with the H1 */
+  margin-top: 0;
 }
 
 nav a {
@@ -78,7 +68,7 @@ nav a {
 }
 
 nav a.current-page {
-  border-bottom: 2px solid #ff8c00; /* Orange underline for the active page */
+  border-bottom: 2px solid #ff8c00;
   color: #333;
 }
 
@@ -86,7 +76,6 @@ nav a:hover {
   text-decoration: solid;
 }
 
-/* 4. Hero Section */
 #home {
   margin-bottom: 2rem;
 }
@@ -106,9 +95,6 @@ nav a:hover {
   background-color: #006666;
 }
 
-/* 5. Menu Section (REFACTORED) */
-
-/* Styles for the Title "Menu" */
 #menu h3 {
   text-align: center;
   font-size: 2rem;
@@ -116,7 +102,6 @@ nav a:hover {
   color: #333;
 }
 
-/* Styles for the intro text */
 .menu-intro {
   text-align: center;
   font-style: italic;
@@ -124,24 +109,21 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-/* The Grid Container - Now targets the wrapper div */
 .menu-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr; /* Mobile Default: 1 Column */
+  grid-template-columns: 1fr;
 }
 
-/* Desktop View: 3 Columns */
 @media (min-width: 768px) {
   .menu-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Individual Category Styles */
 .menu-category h4 {
   color: #008080;
-  border-bottom: 2px solid #ff8c00; /* Orange Accent */
+  border-bottom: 2px solid #ff8c00;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
 }
@@ -155,7 +137,6 @@ nav a:hover {
   font-size: 0.95em;
 }
 
-/* 6. Hours Table Styling */
 .hours-table {
   width: 100%;
   max-width: 400px;
@@ -173,35 +154,31 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* 7. Footer */
-/* Existing footer styles */
 footer {
   margin-top: 4rem;
   border-top: 1px solid #eee;
   text-align: center;
-  padding: 2rem 0; /* Add top/bottom padding */
-  background-color: #f9f9f9; /* Optional: light gray background for footer */
+  padding: 2rem 0;
+  background-color: #f9f9f9;
 }
 
-/* Style for the copyright info */
 .copyright {
   font-weight: bold;
   margin-top: 1rem;
 }
 
-/* Style for YOUR watermark */
 .developer-credit {
-  font-size: 0.8rem; /* Make it smaller than the rest */
-  color: #888; /* Make it lighter/greyer */
+  font-size: 0.8rem;
+  color: #888;
   margin-top: 0.5rem;
 }
 
 .developer-credit a {
   color: #888;
   text-decoration: none;
-  border-bottom: 1px dotted #888; /* Subtle link style */
+  border-bottom: 1px dotted #888;
 }
 
 .developer-credit a:hover {
-  color: #008080; /* Pop of color only when hovering */
+  color: #008080;
 }
