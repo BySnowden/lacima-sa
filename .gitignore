@@ -1,0 +1,12 @@
+# 1. System Files
+.DS_Store
+Thumbs.db
+
+# 2. VS Code Settings
+.vscode/
+
+# 3. Log Files
+*.log
+# 4. Dependency directories (If you use npm, yarn, etc.)
+node_modules/
+dist/
